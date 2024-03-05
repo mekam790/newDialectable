@@ -5,6 +5,10 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 import {GoogleSignin, GoogleSigninButton, statusCodes} from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 
+GoogleSignin.configure({
+  webClientId: '78899656888-llbjgkbdkb8r6gfj47n3n3odb64eu0ia.apps.googleusercontent.com',
+});
+
 const LoginScreen = ({ navigation }) => {
   const [loggedIn, setloggedIn] = useState(false);
   const [user, setUser] = useState([]);
